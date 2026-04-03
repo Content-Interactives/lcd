@@ -1,42 +1,46 @@
 # Least Common Denominator (LCD) Interactive
 
-This repository contains the code for the **Least Common Denominator (LCD) Interactive**, designed to help students explore and understand the concept of finding the least common denominator in fractions through interactive visuals and instant feedback.
+React (JSX) SPA for least common denominator / equivalent fractions work. Curriculum, placement, and standards: [Standards.md](Standards.md).
+
+**Live site:** [https://content-interactives.github.io/lcd/](https://content-interactives.github.io/lcd/)
 
 ---
 
-## 🔗 Live Interactive
+## Stack
 
-Try it out here:  
-👉 https://content-interactives.github.io/lcd/
-
----
-
-## 🌐 Where This Interactive Is Being Used
-
-This interactive is currently featured in the following locations:
-
-- <img width="20" height="20" alt="image" src="https://github.com/user-attachments/assets/5d12571f-8e12-4441-98ab-c0bc94069a96" /> **CK‑12 Intent Response**  
-  - 👉 PRODUCTION: [PENDING]  
-  - 👉 MASTER: [PENDING]
-- 📘 **CK‑12 Flexbooks**  
-  - 👉 [PENDING: Book/lesson link where this interactive appears]
+| Layer | Notes |
+|--------|--------|
+| Build | Vite 6, `@vitejs/plugin-react` |
+| UI | React 19 |
+| Styling | Tailwind CSS 3 |
+| Icons | `lucide-react` |
+| Deploy | `gh-pages -d dist` (`predeploy` → `vite build`) |
 
 ---
 
-## 📚 Standards & Subjects
+## Layout
 
-This interactive aligns with the following topics and standards:
-
-- **📂 Subject Area**: Middle School Math (Grade 6–7)  
-- **➗ Topic**: Least Common Denominator — Understanding how to find the least common denominator to add or subtract fractions  
-- **📏 Common Core**:  
-  - **CCSS.MATH.CONTENT.6.NS.A.1** – Interpret and compute quotients of fractions, and solve word problems involving division of fractions by fractions.  
-  - **CCSS.MATH.CONTENT.7.NS.A.1** – Apply and extend previous understandings of operations with fractions to add, subtract, multiply, and divide rational numbers.
+```
+vite.config.js          # base: '/lcd/'
+src/
+  main.jsx → App.jsx → components/LCD.jsx
+  components/ui/...    # includes slider, card, input, etc.
+```
 
 ---
 
-## 🛠️ Developer Notes
+## Scripts
 
-- **Built with**: React, Javascript, Vite, Tailwind CSS, ESLint ([github.com](https://github.com/Content-Interactives/lcd))  
-- **Deployed via**: GitHub Pages  
-- **See**: `src/`, `public/`, `package.json`, `vite.config.js`, and related config files ([github.com](https://github.com/Content-Interactives/lcd))
+| Command | Purpose |
+|---------|---------|
+| `npm run dev` | Vite dev server |
+| `npm run build` | Production build → `dist/` |
+| `npm run preview` | Preview `dist/` |
+| `npm run lint` | ESLint |
+| `npm run deploy` | Build + publish to GitHub Pages |
+
+---
+
+## Configuration
+
+`base` in `vite.config.js` must match the GitHub Pages project path (`/lcd/`).
